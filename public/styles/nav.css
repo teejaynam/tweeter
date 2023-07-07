@@ -1,0 +1,34 @@
+.nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.span {
+  font-family: 'Bungee';
+}
+
+.header-text {
+  display: flex;
+  font-family: 'Source Sans 3';
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 3;
+}
+
+.right-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.fa-angles-down {
+  color: orange;
+  padding-right: 3em;
+}
