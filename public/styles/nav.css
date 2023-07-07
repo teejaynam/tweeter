@@ -6,13 +6,14 @@
   padding: 1.5em;
   display: flex;
   align-items: center;
+  position: fixed;
 }
 
 .span {
   font-family: 'Bungee';
 }
 
-.header-text {
+.nav-text {
   display: flex;
   font-family: 'Source Sans 3';
   align-items: flex-end;
