@@ -1,0 +1,36 @@
+.new-tweet{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#tweet-text{
+  resize: none;
+  display: flex;
+  width: 50em;
+  font-size: large;
+  outline: none;
+  border: none;
+  resize: none;
+  font-family: 'Source Sans 3';
+  background: transparent;
+  border-bottom: 2px solid black;
+  color: black;
+}
+
+#tweet-label{
+  font-family: 'Source Sans 3';
+  color: black;
+}
+
+#tweet-button{
+  background-color: #4056A1;
+  color: white;
+  margin: 0;
+}
+
+.tweet-line{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
