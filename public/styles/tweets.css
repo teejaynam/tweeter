@@ -4,17 +4,18 @@
   flex-direction: column;
   font-family: 'Source Sans 3';
   margin: 1.5em;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.posted-tweets:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .tweet{
   border: 3px;
   border-style: solid;
   width: 100%;
+  margin: 1em;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.tweet:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 article.tweet header{
@@ -25,6 +26,7 @@ article.tweet header{
 
 /*Name*/
 article.tweet h3{
+  color: inherit;
   margin-left: 1em;
   font-weight: 500;
 }
@@ -35,6 +37,7 @@ article.tweet h4{
   opacity: .5;
 }
 
+/*tweet content*/
 article.tweet p{
   display: flex;
   justify-content: space-evenly;
