@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
 
 
 
@@ -56,6 +58,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
@@ -70,6 +73,27 @@
           </div>
         </form>
       </section>
+
+      <section class="posted-tweets">
+        <article class="tweet">
+          <header>
+            <h3>Name</h3>
+            <h4>@NameHandle</h4>
+          </header>
+          <body>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </body>
+          <footer>
+            <div class="timestamp">X days ago</div>
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </footer>
+        </article>
+      </section>
+      
     </main>
 
 
