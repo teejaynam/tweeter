@@ -38,6 +38,7 @@ const createTweetElement = function(tweetData){
 
   $tweet.append(`
     <header>
+      <img class="avatar" src=${tweetData.user.avatars}></img>
       <h3 class="name">${tweetData.user.name}</h3>
       <h4 class="handle">${tweetData.user.handle}</h4>
     </header>
