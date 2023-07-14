@@ -38,7 +38,7 @@ const createTweetElement = function(tweetData) {
 
 /*get text from tweet-form and post to /tweets json, upon sucesful post, call cleanUp callback to empty textAtrea*/
 const postTweet = () => {
-  const tweetText = $("#tweet-text").val().trime();
+  const tweetText = $("#tweet-text").val().trim();
 
   if (tweetText === "") {
     alert("Empty text, please enter text before tweeting");
@@ -76,6 +76,7 @@ const loadTweets = () => {
 /* clears the textArea and reloads tweets */
 const cleanUp = () => {
   $("#tweet-text").val("");
+  $(".counter").val(140);
   loadTweets();
 };
 
@@ -88,5 +89,5 @@ $(document).ready(function() {
     postTweet();
   });
 
-  timeago().render(document.querySelectorAll('.timeago'));
+  //timeago().render(document.querySelectorAll('.timeago'));
 });
