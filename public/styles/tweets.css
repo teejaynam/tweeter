@@ -21,7 +21,7 @@
 article.tweet header{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
 }
 
 /*Name*/
@@ -31,16 +31,24 @@ article.tweet h3{
   font-weight: 500;
 }
 
+/*Avatar*/
+.avatar{
+  display: flex; 
+  margin-left: 1em;
+}
+
 /*Handle*/
 article.tweet h4{
+  display: flex;
   margin-right:1em;
+  margin-left: auto;
   opacity: .5;
 }
 
 /*tweet content*/
 article.tweet p{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin: 1em;
   border: none;
   border-bottom: 3px solid black;
