@@ -63,7 +63,7 @@ article.tweet footer {
   margin: 1em;
 }
 
-article.tweet footer .timestamp {
+article.tweet footer .timeago {
   margin-left: 1em;
   margin-right: auto;
   display: flex;
