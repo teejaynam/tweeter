@@ -8,7 +8,8 @@ const renderTweets = function(tweets) {
     const oldTweet = createTweetElement(tweet);
     $('.posted-tweets').prepend(oldTweet);
   });
-  
+
+  timeago.render(document.querySelectorAll('.timeago'));
 };
 
 const createTweetElement = function(tweetData) {
@@ -24,7 +25,7 @@ const createTweetElement = function(tweetData) {
       <p>${tweetData.content.text}</p>
     </body>
     <footer>
-      <div class="timestamp">${tweetData.created_at}</div>
+      <span class="timeago" datetime="${tweetData.created_at}">${tweetData.created_at}</span>
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
       <i class="fa-solid fa-heart"></i>
@@ -37,6 +38,18 @@ const createTweetElement = function(tweetData) {
 
 /*get text from tweet-form and post to /tweets json, upon sucesful post, call cleanUp callback to empty textAtrea*/
 const postTweet = () => {
+  const tweetText = $("#tweet-text").val().trime();
+
+  if (tweetText === "") {
+    alert("Empty text, please enter text before tweeting");
+    return;
+  }
+
+  if (tweetText.length > 140) {
+    alert("Tweet exceeds maximum character limit of 140");
+    return;
+  }
+
   const data = $(".tweet-form").serialize();
 
   $.post("/tweets", data, cleanUp)
@@ -66,6 +79,7 @@ const cleanUp = () => {
   loadTweets();
 };
 
+/* load DOM */
 $(document).ready(function() {
   loadTweets();
 
@@ -74,4 +88,5 @@ $(document).ready(function() {
     postTweet();
   });
 
+  timeago().render(document.querySelectorAll('.timeago'));
 });
