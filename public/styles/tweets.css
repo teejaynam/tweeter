@@ -12,6 +12,7 @@
   width: 100%;
   margin: 1em;
   transition: box-shadow 0.3s ease-in-out;
+  word-break: break-all; 
 }
 
 .tweet:hover {
