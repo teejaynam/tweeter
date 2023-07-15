@@ -58,21 +58,28 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form class="tweet-form" action="/tweets" method="POST">
-          <label for="tweet-text" id="tweet-label">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <div class="tweet-line">
-              <button type="submit" id="tweet-button">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-              <script src="./scripts/composer-char-counter.js"></script>
+        <div class="error" id="error-0">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+            Error - empty tweet, please enter some text to tweet! 😮
+        </div>
+        <div class="error" id="error-140">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+            Error - tweet above text character limit of 140! 😠
+        </div>
+          <h2>Compose Tweet</h2>
+            <form class="tweet-form" action="/tweets" method="POST">
+              <label for="tweet-text" id="tweet-label">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+              <div>
+                <div class="tweet-line">
+                <button type="submit" id="tweet-button">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+                <script src="./scripts/composer-char-counter.js"></script>
+                </div>
             </div>
-          </div>
-        </form>
-      </section>
+          </form>
+          </section>
 
       <section class="posted-tweets">
         <article class="tweet">
