@@ -1,5 +1,12 @@
 //submit handler
 
+//function to scape text and create a p tag
+const escape = function(str) {
+  let p = document.createElement("p");
+  p.appendChild(document.createTextNode(str));
+  return p.innerHTML;
+}
+
 const renderTweets = function(tweets) {
   $(".posted-tweets").empty();
   
@@ -22,7 +29,7 @@ const createTweetElement = function(tweetData) {
       <h4 class="handle">${tweetData.user.handle}</h4>
     </header>
     <body>
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
     </body>
     <footer>
       <span class="timeago" datetime="${tweetData.created_at}">${tweetData.created_at}</span>
