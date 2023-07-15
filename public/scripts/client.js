@@ -48,13 +48,19 @@ const postTweet = () => {
   const tweetText = $("#tweet-text").val().trim();
 
   if (tweetText === "") {
-    alert("Empty text, please enter text before tweeting");
+    $("#error-0").slideDown("slow", function() {});
     return;
+  } else {
+    $('#error-0').hide()
+    $('#error-140').hide()
   }
 
   if (tweetText.length > 140) {
-    alert("Tweet exceeds maximum character limit of 140");
+    $("#error-140").slideDown("slow", function() {});
     return;
+  } else {
+    $('#error-0').hide()
+    $('#error-140').hide()
   }
 
   const data = $(".tweet-form").serialize();
@@ -89,6 +95,8 @@ const cleanUp = () => {
 
 /* load DOM */
 $(document).ready(function() {
+  $('#error-0').hide()
+  $('#error-140').hide()
   loadTweets();
 
   $(".tweet-form").on("submit", (event) => {
