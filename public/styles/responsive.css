@@ -1,0 +1,23 @@
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .header-main {
+    display: flex;
+    margin: 1em;
+    flex: 1;
+    margin-top: 7.5em;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+
+  .new-tweet {
+    display: flex;
+    margin-top: 5em;
+  }
+}
