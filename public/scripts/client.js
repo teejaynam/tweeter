@@ -5,7 +5,7 @@ const escape = function(str) {
   let p = document.createElement("p");
   p.appendChild(document.createTextNode(str));
   return p.innerHTML;
-}
+};
 
 const renderTweets = function(tweets) {
   $(".posted-tweets").empty();
@@ -51,16 +51,16 @@ const postTweet = () => {
     $("#error-0").slideDown("slow", function() {});
     return;
   } else {
-    $('#error-0').hide()
-    $('#error-140').hide()
+    $('#error-0').hide();
+    $('#error-140').hide();
   }
 
   if (tweetText.length > 140) {
     $("#error-140").slideDown("slow", function() {});
     return;
   } else {
-    $('#error-0').hide()
-    $('#error-140').hide()
+    $('#error-0').hide();
+    $('#error-140').hide();
   }
 
   const data = $(".tweet-form").serialize();
@@ -95,8 +95,8 @@ const cleanUp = () => {
 
 /* load DOM */
 $(document).ready(function() {
-  $('#error-0').hide()
-  $('#error-140').hide()
+  $('#error-0').hide();
+  $('#error-140').hide();
   loadTweets();
 
   $(".tweet-form").on("submit", (event) => {
