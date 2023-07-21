@@ -3,16 +3,15 @@
   height: 520px;
   background-color: #75c444;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */;
 }
 
 .header-visible{
   width: 100%;
+  column-gap: 0px;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: column;
-  column-gap: 0px;
 }
 
 .name{
