@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     counter.text(countRemainder);
 
-    if ( countRemainder < 0 ) {
+    if (countRemainder < 0) {
       counter.css('color', 'red');
     } else {
       counter.css('color', '');
