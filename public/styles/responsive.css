@@ -20,4 +20,18 @@
     display: flex;
     margin-top: 5em;
   }
+
+  #tweet-text{
+    width: 686px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .new-tweet {
+    display: flex;
+  }
+
+  #tweet-text{
+    width: 514.56px;
+  }
 }
