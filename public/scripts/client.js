@@ -48,21 +48,20 @@ const postTweet = () => {
   const tweetText = $("#tweet-text").val().trim();
 
   if (tweetText === "") {
-    $("#error-0").slideDown("slow", function() {});
+    showError("Error - Empty Tweet please enter some text to tweet! 🤨")
     return;
   } else {
-    $('#error-0').hide();
-    $('#error-140').hide();
+    $("#error-message").slideUp("slow");
   }
 
   if (tweetText.length > 140) {
-    $("#error-140").slideDown("slow", function() {});
+    showError("Error - Tweet is over the 140 char limit! 🙁")
     return;
   } else {
-    $('#error-0').hide();
-    $('#error-140').hide();
+    $("#error-message").slideUp("slow");
   }
 
+  
   const data = $(".tweet-form").serialize();
 
   $.post("/tweets", data, cleanUp)
@@ -93,10 +92,17 @@ const cleanUp = () => {
   loadTweets();
 };
 
+/* functions to show and hide error message */
+
+const showError = (errorMessage) => {
+  $("#error-message").text(errorMessage);
+  $("#error-message").slideDown("slow");
+}
+
+
 /* load DOM */
 $(document).ready(function() {
-  $('#error-0').hide();
-  $('#error-140').hide();
+  $('.error').hide();
   loadTweets();
 
   $(".tweet-form").on("submit", (event) => {
